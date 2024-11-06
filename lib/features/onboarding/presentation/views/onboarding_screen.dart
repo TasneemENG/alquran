@@ -1,3 +1,4 @@
+import 'package:alquran/features/onboarding/presentation/views/widgets/onboarding/onboarding_body.dart';
 import 'package:flutter/material.dart';
 class OnboardingScreen extends StatefulWidget {
   const OnboardingScreen({super.key});
@@ -10,7 +11,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-
+      body: OnboardingBody(),
     );
   }
 }

@@ -2,11 +2,16 @@ import 'package:flutter/material.dart';
 
 abstract class AppColors {
   static const Color solidBrown = Color(0xFF522700);
+  static const Color Brown = Color(0xFFA85000);
   static const Color semiTransparentOrange = Color.fromRGBO(168, 80, 0, 0.81);
+  static const Color solidGray = Color(0xff777777);
+  static const Color white = Color(0xffFFFFFF);
 }
 
 abstract class TextColors {
   static const red500 = Color(0xffd51a1a);
+  static const solidGray = Color(0xff777777);
+  static const Brown = Color(0xFFA85000);
   static const grey800 = Color(0xff39434F);
   static const grey700 = Color(0xff606873);
   static const grey600 = Color(0xff808B9A);

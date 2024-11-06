@@ -10,7 +10,7 @@ class QuranTitle extends StatelessWidget {
       height: 63,
       child: Text(
         'القران الكريم',
-        style: TextStyles.quranTextStyle,
+        style: TextStyles.s40w600white,
       ),
     );
   }
