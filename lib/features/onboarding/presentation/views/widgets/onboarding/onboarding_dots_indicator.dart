@@ -9,7 +9,7 @@ class OnboardingDotsIndicator extends StatelessWidget {
     required this.currentPage,
     required this.dotCount,
     this.dotColor = AppColors.white,
-    this.activeDotColor = AppColors.Brown,
+    this.activeDotColor = AppColors.accentBrown,
     this.spacing = 3.0,
   });
 

@@ -22,15 +22,15 @@ class ActionButtonsRow extends StatelessWidget {
         children: [
           ActionButton(
             label: 'تخطي',
-            borderColor: AppColors.solidGray,
-            textColor: AppColors.solidGray,
+            borderColor: AppColors.mediumGray,
+            textColor: AppColors.mediumGray,
             backgroundColor: Colors.transparent,
             onPressed: onSkip,
           ),
           ActionButton(
             label: 'متابعة',
-            borderColor: AppColors.Brown,
-            textColor: AppColors.Brown,
+            borderColor: AppColors.accentBrown,
+            textColor: AppColors.accentBrown,
             backgroundColor: AppColors.white,
             onPressed: onContinue,
           ),

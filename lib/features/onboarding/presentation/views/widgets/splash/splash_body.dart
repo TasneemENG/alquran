@@ -23,14 +23,7 @@ class _SplashBodyState extends State<SplashBody> {
   Widget build(BuildContext context) {
     return Container(
       decoration: const BoxDecoration(
-        gradient: LinearGradient(
-          begin: Alignment.topCenter,
-          end: Alignment.bottomCenter,
-          colors: [
-            AppColors.solidBrown,
-            AppColors.semiTransparentOrange,
-          ],
-        ),
+        gradient: AppColors.linearGradientBrown,
       ),
       child: const Stack(
         children: [

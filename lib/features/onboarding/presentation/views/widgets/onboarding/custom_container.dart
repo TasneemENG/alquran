@@ -2,7 +2,6 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:alquran/core/functions/helper.dart';
 import '../../../../../../core/manage_routes/routes.dart';
-import '../../../../../../core/resources/colors.dart';
 import 'action_buttons_row.dart';
 import 'title_subtitle_text.dart';
 import '../../../../../../core/resources/styles.dart';
@@ -34,7 +33,7 @@ class CustomContainer extends StatelessWidget {
         curve: Curves.decelerate,
       );
     } else {
-      context.pushReplacementNamed(Routes.homeView);
+      context.pushNamed(Routes.loginView);
     }
   }
 
@@ -75,7 +74,7 @@ class CustomContainer extends StatelessWidget {
           // Action Buttons Row
           ActionButtonsRow(
             onSkip: () {
-              context.pushReplacementNamed(Routes.homeView);
+              context.pushNamed(Routes.loginView);
             },
             onContinue: () => handleNext(context),
           ),

@@ -9,7 +9,7 @@ abstract class Routes {
   static const String forgetPasswordView = '/forgetPasswordView';
   static const String codeVerificationView = '/codeVerificationView';
   static const String resetPassView = '/resetPassView';
-  static const String paymentView = '/paymentView';
+  static const String watingView = '/watingView';
 
   //home
   static const String homeView = '/homeView';
