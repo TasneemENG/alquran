@@ -16,7 +16,7 @@ class SuccessDialog extends StatelessWidget {
       ),
       content: Padding(
         padding: const EdgeInsets.all(8.0),
-        child: Container(
+        child: SizedBox(
           width: 327,
           height: 350,
           child: Column(
@@ -24,23 +24,23 @@ class SuccessDialog extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Container(
-                padding: EdgeInsets.all(16),
-                decoration: BoxDecoration(
+                padding: const EdgeInsets.all(16),
+                decoration: const BoxDecoration(
                   color: AppColors.offWhite,
                   shape: BoxShape.circle,
                 ),
-                child: Icon(
+                child: const Icon(
                   Icons.check,
                   color: AppColors.accentBrown,
                   size: 48,
                 ),
               ),
-              SizedBox(height: 16),
-              Text('تم بنجاح', style: TextStyles.s24w700black),
-              SizedBox(height: 8),
-              Text('لقد تم إعادة تعيين كلمة المرور الخاصة بك بنجاح.',
+              const SizedBox(height: 16),
+              const Text('تم بنجاح', style: TextStyles.s24w700black),
+              const SizedBox(height: 8),
+              const Text('لقد تم إعادة تعيين كلمة المرور الخاصة بك بنجاح.',
                   textAlign: TextAlign.center, style: TextStyles.s16w400solidgray),
-              SizedBox(height: 24),
+              const SizedBox(height: 24),
               CustomButton(
                 width: 183,
                   text: 'تسجيل الدخول',

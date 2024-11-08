@@ -4,8 +4,11 @@ import 'package:flutter/material.dart';
 import 'login_content.dart';
 import 'sign_up_content.dart';
 import 'social_login_options.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomTabBar extends StatefulWidget {
+  const CustomTabBar({super.key});
+
   @override
   _CustomTabBarState createState() => _CustomTabBarState();
 }
@@ -25,11 +28,10 @@ class _CustomTabBarState extends State<CustomTabBar> {
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          // Custom Tab Bar
           Container(
-            width: 358,
-            height: 40,
-            padding: EdgeInsets.symmetric(horizontal: 8.0, vertical: 4.0),
+            width: 358.w,
+            height: 40.h,
+            padding: EdgeInsets.symmetric(horizontal: 8.w, vertical: 4.h),
             decoration: BoxDecoration(
               color: AppColors.lightGrayOverlay,
               borderRadius: BorderRadius.circular(10.0),
@@ -41,12 +43,13 @@ class _CustomTabBarState extends State<CustomTabBar> {
                 GestureDetector(
                   onTap: () => onTabTapped(0),
                   child: Container(
-                    height: 30,
-                    width: 154,
+                    height: 30.h,
+                    width: 154.w,
                     alignment: Alignment.center,
                     decoration: BoxDecoration(
-                      color:
-                          selectedIndex == 0 ? Colors.white : AppColors.lightGrayOverlay,
+                      color: selectedIndex == 0
+                          ? Colors.white
+                          : AppColors.lightGrayOverlay,
                       borderRadius: BorderRadius.circular(8.0),
                     ),
                     child: Text(
@@ -59,17 +62,18 @@ class _CustomTabBarState extends State<CustomTabBar> {
                     ),
                   ),
                 ),
-                SizedBox(width: 8.0),
+                SizedBox(width: 8.w),
                 // Login Tab
                 GestureDetector(
                   onTap: () => onTabTapped(1),
                   child: Container(
-                    height: 30,
-                    width: 154,
+                    height: 30.h,
+                    width: 154.w,
                     alignment: Alignment.center,
                     decoration: BoxDecoration(
-                      color:
-                          selectedIndex == 1 ? Colors.white : AppColors.lightGrayOverlay,
+                      color: selectedIndex == 1
+                          ? Colors.white
+                          : AppColors.lightGrayOverlay,
                       borderRadius: BorderRadius.circular(8.0),
                     ),
                     child: Text(
@@ -85,18 +89,18 @@ class _CustomTabBarState extends State<CustomTabBar> {
               ],
             ),
           ),
-      
-          SizedBox(height: 40),
+
+          SizedBox(height: 40.h),
 
           selectedIndex == 0
               ? SignUpContent()
               : LoginContent(),
-          const SizedBox(height: 40.0),
+          SizedBox(height: 40.h),
           Text(
             'خيارات تسجيل الدخول الأخرى',
             style: TextStyles.s14w400solidgray.copyWith(color: AppColors.black),
           ),
-          const SizedBox(height: 20.0),
+          SizedBox(height: 20.h),
           const SocialLoginOptions(),
         ],
       ),

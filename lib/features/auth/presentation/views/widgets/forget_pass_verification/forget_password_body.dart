@@ -27,14 +27,14 @@ class _ForgetPasswordBodyState extends State<ForgetPasswordBody> {
           padding: const EdgeInsets.symmetric(horizontal: ForgetPasswordBody.paddingValue),
           child: Column(
             children: [
-              SizedBox(height: 30),
+              const SizedBox(height: 30),
               const BuildBackButton(),
-              SizedBox(height: 30),
+              const SizedBox(height: 30),
               const TitleDescription(
                 title: 'نسيت كلمة المرور؟',
                 description: 'أدخل بريدك الإلكتروني لإعادة تعيين كلمة المرور الخاصة بك، وسنرسل لك رمز التأكيد',
               ),
-              SizedBox(height: 60),
+              const SizedBox(height: 60),
               CustomTextField(
                 label: 'البريد الإلكتروني',
                 hintText: 'أدخل بريدك الإلكتروني',
@@ -46,7 +46,7 @@ class _ForgetPasswordBodyState extends State<ForgetPasswordBody> {
                   return null;
                 },
               ),
-              SizedBox(height: 30),
+              const SizedBox(height: 30),
               CustomButton(text: 'ارسال', onPressed: (){})
             ],
           ),

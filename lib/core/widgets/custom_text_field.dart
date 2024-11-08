@@ -1,7 +1,8 @@
-import 'package:alquran/core/resources/colors.dart';
 import 'package:flutter/material.dart';
-
+import '../../../../core/resources/colors.dart';
 import '../resources/styles.dart';
+
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomTextField extends StatelessWidget {
   final String label;
@@ -28,21 +29,22 @@ class CustomTextField extends StatelessWidget {
           label,
           style: TextStyles.s16w500black,
         ),
-        const SizedBox(height: 8.0),
-        Container(
-          height: 38,
-          width: 358,
+        SizedBox(height: 8.h),
+        SizedBox(
+          height: 38.h,
+          width: 358.w,
           child: TextFormField(
             controller: controller,
             decoration: InputDecoration(
               hintText: hintText,
+              hintStyle: TextStyles.s14w400solidgray,
               labelStyle: TextStyles.s14w400solidgray,
               filled: true,
               fillColor: Colors.white,
-              contentPadding: const EdgeInsets.all( 10.0),
+              contentPadding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 10.h),
               border: _buildBorder(AppColors.mediumGray, 1.0),
               enabledBorder: _buildBorder(AppColors.mediumGray, 1.0),
-              errorStyle: TextStyles.s16w500black,
+              errorStyle: TextStyles.s12w400gray,
             ),
             obscureText: isPassword,
             validator: validator,

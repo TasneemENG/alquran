@@ -6,12 +6,12 @@ class BuildBackButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Spacer(),
+        const Spacer(),
         IconButton(
           onPressed: () {
             Navigator.pop(context);
           },
-          icon: Container(
+          icon: SizedBox(
             width: 30,
             height: 30,
             child: Image.asset('assets/images/back icon.png'),

@@ -31,7 +31,7 @@ class _WatingBodyState extends State<WatingBody> with SingleTickerProviderStateM
     _controller.forward();
 
     Future.delayed(const Duration(seconds: 3), () {
-     // context.pushNamed(Routes.homeView);
+     context.pushNamed(Routes.homeView);
     });
   }
 
@@ -49,19 +49,19 @@ class _WatingBodyState extends State<WatingBody> with SingleTickerProviderStateM
         children: [
           const SizedBox(height: 115),
           Center(
-            child: Container(
+            child: SizedBox(
               height: 450,
               width: 314,
               child: Image.asset('assets/images/quran.png'),
             ),
           ),
           const SizedBox(height: 30),
-          Text(
+          const Text(
             'تم ارسال طلبك',
             style: TextStyles.s24w600brown,
           ),
           const SizedBox(height: 30),
-          Text(
+          const Text(
             'يرجى الانتظار..\nسيقوم المسؤولون بتسكينك مع أحد المحفظين',
             style: TextStyles.s16w500black,
             textAlign: TextAlign.center,

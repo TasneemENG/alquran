@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'core/manage_routes/app_router.dart';
 import 'core/manage_routes/routes.dart';
 
@@ -11,15 +12,21 @@ class AlQuranApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Al Quran',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.white),
-        useMaterial3: true,
-      ),
-      initialRoute: Routes.splashView,
-      onGenerateRoute: AppRouter().generateRouter,
-    );
+    return ScreenUtilInit(
+        designSize: const Size(390, 844),
+        minTextAdapt: true,
+        splitScreenMode: true, // Ensures better handling of screen split mode
+        builder: (context, child) {
+          return MaterialApp(
+            debugShowCheckedModeBanner: false,
+            title: 'Al Quran',
+            theme: ThemeData(
+              colorScheme: ColorScheme.fromSeed(seedColor: Colors.white),
+              useMaterial3: true,
+            ),
+            initialRoute: Routes.splashView,
+            onGenerateRoute: AppRouter().generateRouter,
+          );
+        });
   }
 }

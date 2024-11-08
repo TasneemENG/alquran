@@ -6,11 +6,14 @@ class QuranTitle extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const SizedBox(
+    return SizedBox(
       height: 63,
-      child: Text(
-        'القران الكريم',
-        style: TextStyles.s40w600white,
+      child: Center(
+        child: Text(
+          'القران الكريم',
+          style: TextStyles.s40w600white,
+          overflow: TextOverflow.ellipsis,
+        ),
       ),
     );
   }

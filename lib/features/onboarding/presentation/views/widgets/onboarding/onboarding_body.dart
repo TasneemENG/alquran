@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-
-import '../../../../../../core/resources/colors.dart';
 import 'onboarding_dots_indicator.dart';
 import 'onboarding_page_view.dart';
 
@@ -13,32 +11,45 @@ class OnboardingBody extends StatefulWidget {
 
 class _OnboardingBodyState extends State<OnboardingBody> {
   final PageController _pageController = PageController();
-  int _currentPage = 0; // Add state variable for current page
+  int _currentPage = 0;
+  bool _isVisible = false;
 
   @override
-  void dispose() {
-    _pageController.dispose();
-    super.dispose();
+  void initState() {
+    super.initState();
+    _startFadeIn();
+  }
+
+  void _startFadeIn() {
+    Future.delayed(const Duration(milliseconds: 500), () {
+      setState(() {
+        _isVisible = true;
+      });
+    });
   }
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      alignment: Alignment.center,
-      children: [
-        OnboardingPageView(
-          pageController: _pageController,
-          onPageChanged: (index) {
-            setState(() {
-              _currentPage = index;
-            });
-          },
-        ),
-        OnboardingDotsIndicator(
-          currentPage: _currentPage,
-          dotCount: 3,
-        ),
-      ],
+    return AnimatedOpacity(
+      opacity: _isVisible ? 1.0 : 0.0,
+      duration: const Duration(milliseconds: 1500),
+      child: Stack(
+        alignment: Alignment.center,
+        children: [
+          OnboardingPageView(
+            pageController: _pageController,
+            onPageChanged: (index) {
+              setState(() {
+                _currentPage = index;
+              });
+            },
+          ),
+          OnboardingDotsIndicator(
+            currentPage: _currentPage,
+            dotCount: 3,
+          ),
+        ],
+      ),
     );
   }
 }

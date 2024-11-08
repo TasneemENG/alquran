@@ -66,7 +66,7 @@ class _VerificationBodyState extends State<VerificationBody> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text(
+                  const Text(
                     'لم تستلم الرمز؟',
                     style: TextStyles.s14w400solidgray,
                   ),
@@ -74,7 +74,7 @@ class _VerificationBodyState extends State<VerificationBody> {
                     onTap: () {
                       // Add functionality to resend OTP
                     },
-                    child: Text(
+                    child: const Text(
                       ' إعادة ارسال',
                       style: TextStyles.s16w400brwon,
                     ),

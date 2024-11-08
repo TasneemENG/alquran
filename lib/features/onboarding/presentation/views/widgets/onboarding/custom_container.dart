@@ -5,6 +5,7 @@ import '../../../../../../core/manage_routes/routes.dart';
 import 'action_buttons_row.dart';
 import 'title_subtitle_text.dart';
 import '../../../../../../core/resources/styles.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomContainer extends StatelessWidget {
   static const double topPosition = 359;
@@ -40,38 +41,34 @@ class CustomContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Positioned(
-      top: topPosition,
-      left: leftPosition,
+      top: topPosition.h,
+      left: leftPosition.w,
       child: Stack(
         children: [
-          // Background with blur effect
           ClipRRect(
-            borderRadius: BorderRadius.circular(24),
+            borderRadius: BorderRadius.circular(24.r),
             child: BackdropFilter(
               filter: ImageFilter.blur(sigmaX: 4, sigmaY: 1),
               child: Container(
-                width: containerWidth,
-                height: containerHeight,
+                width: containerWidth.w,
+                height: containerHeight.h,
                 decoration: BoxDecoration(
                   color: const Color(0xBA000000),
-                  borderRadius: BorderRadius.circular(24),
+                  borderRadius: BorderRadius.circular(24.r),
                 ),
               ),
             ),
           ),
-          // Title Text
           TitleSubtitleText(
             text: title,
             style: TextStyles.s40w600white,
-            topPosition: 38,
+            topPosition: 38.h,
           ),
-          // Subtitle Text
           TitleSubtitleText(
             text: subTitle,
             style: TextStyles.s24w400white,
-            topPosition: 127,
+            topPosition: 127.h,
           ),
-          // Action Buttons Row
           ActionButtonsRow(
             onSkip: () {
               context.pushNamed(Routes.loginView);

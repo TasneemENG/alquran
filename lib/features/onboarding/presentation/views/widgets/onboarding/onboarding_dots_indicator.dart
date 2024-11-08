@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../../../core/resources/colors.dart';
 
@@ -22,8 +23,8 @@ class OnboardingDotsIndicator extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Positioned(
-      top: 763,
-      left: 155,
+      top: 763.h,
+      left: 155.w,
       child: AnimatedSmoothIndicator(
         activeIndex: currentPage,
         count: dotCount,
@@ -31,8 +32,8 @@ class OnboardingDotsIndicator extends StatelessWidget {
             activeDotColor: activeDotColor,
             spacing: spacing,
             dotColor: dotColor,
-            dotWidth: 12,
-            dotHeight: 12,
+            dotWidth: 12.w,
+            dotHeight: 12.h,
             expansionFactor: 4),
       ),
     );

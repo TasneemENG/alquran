@@ -6,36 +6,33 @@ class SocialLoginOptions extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final List<Map<String, String>> socialMedia = [
+      {'icon': 'assets/images/facebook.png', 'label': 'Facebook'},
+      {'icon': 'assets/images/google.png', 'label': 'Google'},
+      {'icon': 'assets/images/apple.png', 'label': 'Apple'},
+    ];
+
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        CircleAvatar(
-          backgroundColor: AppColors.white,
-          radius: 30,
-          child: Image.asset(
-            'assets/images/facebook.png',
-            fit: BoxFit.cover,
+      children: socialMedia.map((social) {
+        return GestureDetector(
+          onTap: () {
+            // Handle social login action here
+            print('${social['label']} login tapped');
+          },
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 10.0),
+            child: CircleAvatar(
+              backgroundColor: AppColors.white,
+              radius: 30,
+              child: Image.asset(
+                social['icon']!,
+                fit: BoxFit.cover,
+              ),
+            ),
           ),
-        ),
-        const SizedBox(width: 10.0),
-        CircleAvatar(
-          backgroundColor: AppColors.white,
-          radius: 30,
-          child: Image.asset(
-            'assets/images/google.png',
-            fit: BoxFit.cover,
-          ),
-        ),
-        const SizedBox(width: 10.0),
-        CircleAvatar(
-          backgroundColor: AppColors.white,
-          radius: 30,
-          child: Image.asset(
-            'assets/images/apple.png',
-            fit: BoxFit.cover,
-          ),
-        ),
-      ],
+        );
+      }).toList(),
     );
   }
 }

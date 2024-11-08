@@ -17,13 +17,13 @@ class TitleDescription extends StatelessWidget {
           textAlign: TextAlign.right,
           style: TextStyles.s24w500brown,
         ),
-        SizedBox(height: 30,),
+        const SizedBox(height: 30,),
         Text(
           description,
           textAlign: TextAlign.right,
           style: TextStyles.s16w400solidgray,
         ),
       ],
-    );;
+    );
   }
 }

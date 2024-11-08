@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'custom_tap_bar.dart';
 import 'header.dart';
@@ -14,8 +15,8 @@ class _LoginSignupWidgetState extends State<LoginSignupWidget> {
   Widget build(BuildContext context) {
     return Column(
         children: [
-          const SizedBox(height: 76,),
-          const Header(),
+          SizedBox(height: 76.h,),
+          Header(),
           CustomTabBar(),
         ]
     );

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../../../core/resources/styles.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomButton extends StatelessWidget {
   final String text;
@@ -18,14 +19,14 @@ class CustomButton extends StatelessWidget {
     return InkWell(
       onTap: onPressed,
       child: Container(
-        width: width,
-        height: 46.0,
+        width: width.w, // Make sure it's responsive
+        height: 46.h, // Responsive height
         alignment: Alignment.center,
-        decoration: BoxDecoration(
-          borderRadius: const BorderRadius.all(
+        decoration: const BoxDecoration(
+          borderRadius: BorderRadius.all(
             Radius.circular(33.0),
           ),
-          gradient: const RadialGradient(
+          gradient: RadialGradient(
             center: Alignment.topLeft,
             radius: 2.0,
             colors: [

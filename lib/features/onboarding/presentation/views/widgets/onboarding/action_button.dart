@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class ActionButton extends StatelessWidget {
   final String label;
@@ -19,26 +20,26 @@ class ActionButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 156,
-      height: 43,
-      padding: const EdgeInsets.symmetric(vertical: 6, horizontal: 10),
+      width: 156.w,
+      height: 43.h,
+      padding: EdgeInsets.symmetric(vertical: 6.h, horizontal: 10.w),
       decoration: BoxDecoration(
         color: backgroundColor,
-        borderRadius: BorderRadius.circular(31),
-        border: Border.all(width: 2, color: borderColor),
+        borderRadius: BorderRadius.circular(31.r),
+        border: Border.all(width: 2.w, color: borderColor),
       ),
       child: TextButton(
         onPressed: onPressed,
         style: TextButton.styleFrom(
           padding: EdgeInsets.zero,
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(31),
+            borderRadius: BorderRadius.circular(31.r),
           ),
         ),
         child: Text(
           label,
           style: TextStyle(
-            fontSize: 20,
+            fontSize: 20.sp,
             color: textColor,
             fontFamily: 'ElMessiri',
             fontWeight: FontWeight.w600,

@@ -6,38 +6,38 @@ class TermsCheckbox extends StatelessWidget {
   final ValueChanged<bool?> onChanged;
 
   const TermsCheckbox({
-    Key? key,
+    super.key,
     required this.isAccepted,
     required this.onChanged,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
     return CheckboxListTile(
       subtitle: Row(
         children: [
-          Text(
+          const Text(
             ' أوافق على',
             style: TextStyles.s14w400solidgray,
           ),
           GestureDetector(
             onTap: () {
-              // Add functionality to open Terms of Service page
+
             },
-            child: Text(
+            child: const Text(
               ' شروط خدمة',
               style: TextStyles.s16w400brwon,
             ),
           ),
-          Text(
+          const Text(
             ' المنصة',
             style: TextStyles.s14w400solidgray,
           ),
           GestureDetector(
             onTap: () {
-              // Add functionality to open Privacy Policy page
+
             },
-            child: Text(
+            child: const Text(
               ' وسياسة الخصوصية',
               style: TextStyles.s16w400brwon,
             ),
@@ -47,8 +47,8 @@ class TermsCheckbox extends StatelessWidget {
       value: isAccepted,
       onChanged: onChanged,
       controlAffinity: ListTileControlAffinity.leading,
-      contentPadding: EdgeInsets.symmetric(vertical: 12.0),
+      contentPadding: const EdgeInsets.symmetric(vertical: 12.0),
       dense: true,
-    );
+     );
   }
 }

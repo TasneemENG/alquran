@@ -11,7 +11,7 @@ class VrificationScreen extends StatefulWidget {
 class _VrificationScreenState extends State<VrificationScreen> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       body: VerificationBody(),
     );
   }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart'; // Add this for responsiveness
 import '../../../../data/models/onboarding_item.dart';
 import 'custom_container.dart';
 
@@ -40,6 +41,8 @@ class PageViewItem extends StatelessWidget {
         Image.asset(
           onboardingItem[index].image,
           fit: BoxFit.cover,
+          width: double.infinity,
+          height: double.infinity,
         ),
         CustomContainer(
           title: onboardingItem[index].title,

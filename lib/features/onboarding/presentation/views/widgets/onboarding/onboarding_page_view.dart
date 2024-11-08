@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart'; // Add this import for responsiveness
 import 'page_view_item.dart';
 
 class OnboardingPageView extends StatefulWidget {
