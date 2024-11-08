@@ -1,6 +1,7 @@
 import 'package:alquran/core/resources/styles.dart';
 import 'package:alquran/core/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'back_button.dart';
 import 'otp_pin_put.dart';
 import 'success_dialog.dart';
@@ -40,43 +41,43 @@ class _VerificationBodyState extends State<VerificationBody> {
       textDirection: TextDirection.rtl,
       child: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 16),
+          padding: EdgeInsets.symmetric(horizontal: 16.w),
           child: Column(
             children: [
-              const SizedBox(height: 30),
+              SizedBox(height: 30.h),
               const BuildBackButton(),
-              const SizedBox(height: 30),
+              SizedBox(height: 30.h),
               const TitleDescription(
                 title: 'رمز التحقق',
                 description: 'أدخل الرمز الذي أرسلناه إلى رقمك 012345*****',
               ),
-              const SizedBox(height: 30),
+              SizedBox(height: 30.h),
               OtpPinPut(
                 otpController: otpController,
                 onCompleted: (value) {
                   print("OTP Entered: $value");
                 },
               ),
-              const SizedBox(height: 60),
+              SizedBox(height: 60.h),
               CustomButton(
                 text: 'تحقق',
                 onPressed: _verifyOtp,
               ),
-              const SizedBox(height: 30),
+              SizedBox(height: 30.h),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  const Text(
+                  Text(
                     'لم تستلم الرمز؟',
-                    style: TextStyles.s14w400solidgray,
+                    style: TextStyles.s14w400solidgray.copyWith(fontSize: 14.sp),
                   ),
                   GestureDetector(
                     onTap: () {
                       // Add functionality to resend OTP
                     },
-                    child: const Text(
+                    child: Text(
                       ' إعادة ارسال',
-                      style: TextStyles.s16w400brwon,
+                      style: TextStyles.s16w400brwon.copyWith(fontSize: 16.sp),
                     ),
                   ),
                 ],

@@ -16,7 +16,7 @@ class TermsCheckbox extends StatelessWidget {
     return CheckboxListTile(
       subtitle: Row(
         children: [
-          const Text(
+          Text(
             ' أوافق على',
             style: TextStyles.s14w400solidgray,
           ),
@@ -24,12 +24,12 @@ class TermsCheckbox extends StatelessWidget {
             onTap: () {
 
             },
-            child: const Text(
+            child: Text(
               ' شروط خدمة',
-              style: TextStyles.s16w400brwon,
+              style: TextStyles.s14w400brown,
             ),
           ),
-          const Text(
+          Text(
             ' المنصة',
             style: TextStyles.s14w400solidgray,
           ),
@@ -37,7 +37,7 @@ class TermsCheckbox extends StatelessWidget {
             onTap: () {
 
             },
-            child: const Text(
+            child: Text(
               ' وسياسة الخصوصية',
               style: TextStyles.s16w400brwon,
             ),

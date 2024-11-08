@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 class BuildBackButton extends StatelessWidget {
   const BuildBackButton({super.key});
 
@@ -12,12 +14,11 @@ class BuildBackButton extends StatelessWidget {
             Navigator.pop(context);
           },
           icon: SizedBox(
-            width: 30,
-            height: 30,
-            child: Image.asset('assets/images/back icon.png'),
+            width: 30.w,
+            height: 30.h,
+            child: Image.asset('assets/images/back_icon.png'),
           ),
         ),
-
       ],
     );
   }

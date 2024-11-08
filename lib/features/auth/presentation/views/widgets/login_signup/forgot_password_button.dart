@@ -17,7 +17,7 @@ class ForgotPasswordButton extends StatelessWidget {
           onPressed: () {
             context.pushNamed(Routes.forgetPasswordView);
           },
-          child: const Text(
+          child: Text(
             'نسيت كلمة المرور؟',
             style: TextStyles.s14w400brown,
           ),

@@ -1,7 +1,7 @@
-// lib/features/auth/presentation/views/widgets/otp_pin_put.dart
 import 'package:alquran/core/resources/colors.dart';
 import 'package:alquran/core/resources/styles.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pinput/pinput.dart';
 
 class OtpPinPut extends StatelessWidget {
@@ -17,32 +17,32 @@ class OtpPinPut extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final defaultPinTheme = PinTheme(
-      width: 48,
-      height: 48,
-      textStyle: TextStyles.s24w700black,
+      width: 48.w,
+      height: 48.h,
+      textStyle: TextStyles.s24w700black.copyWith(fontSize: 24.sp),
       decoration: BoxDecoration(
         color: AppColors.offWhite,
-        borderRadius: BorderRadius.circular(12),
+        borderRadius: BorderRadius.circular(12.r),
       ),
     );
 
     final filledPinTheme = defaultPinTheme.copyWith(
-        decoration: defaultPinTheme.decoration?.copyWith(
-          border: Border.all(
-            color: AppColors.accentBrown,
-            width: 2,
-          ),
-          borderRadius: BorderRadius.circular(16),
-    )
+      decoration: defaultPinTheme.decoration?.copyWith(
+        border: Border.all(
+          color: AppColors.accentBrown,
+          width: 2.w,
+        ),
+        borderRadius: BorderRadius.circular(16.r),
+      ),
     );
 
     final focusedPinTheme = defaultPinTheme.copyWith(
       decoration: defaultPinTheme.decoration?.copyWith(
         border: Border.all(
           color: AppColors.accentBrown,
-          width: 2,
+          width: 2.w,
         ),
-        borderRadius: BorderRadius.circular(16),
+        borderRadius: BorderRadius.circular(16.r),
       ),
     );
 
@@ -50,8 +50,9 @@ class OtpPinPut extends StatelessWidget {
       decoration: defaultPinTheme.decoration?.copyWith(
         border: Border.all(
           color: Colors.red,
+          width: 2.w,
         ),
-        borderRadius: BorderRadius.circular(12),
+        borderRadius: BorderRadius.circular(12.r),
       ),
     );
 

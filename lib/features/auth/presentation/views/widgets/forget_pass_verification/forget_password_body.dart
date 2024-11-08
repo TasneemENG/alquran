@@ -1,6 +1,7 @@
 import 'package:alquran/core/widgets/custom_button.dart';
 import 'package:alquran/core/widgets/custom_text_field.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'back_button.dart';
 import 'title_description.dart';
@@ -8,8 +9,8 @@ import 'title_description.dart';
 class ForgetPasswordBody extends StatefulWidget {
   ForgetPasswordBody({super.key});
 
-  static const double paddingValue = 16.0;
-  static const double spacingValue = 30.0;
+  static final double paddingValue = 16.w;
+  static final double spacingValue = 30.h;
 
   final TextEditingController emailController = TextEditingController();
 
@@ -24,17 +25,17 @@ class _ForgetPasswordBodyState extends State<ForgetPasswordBody> {
       textDirection: TextDirection.rtl,
       child: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: ForgetPasswordBody.paddingValue),
+          padding: EdgeInsets.symmetric(horizontal: ForgetPasswordBody.paddingValue),
           child: Column(
             children: [
-              const SizedBox(height: 30),
+              SizedBox(height: 30.h),
               const BuildBackButton(),
-              const SizedBox(height: 30),
+              SizedBox(height: 30.h),
               const TitleDescription(
                 title: 'نسيت كلمة المرور؟',
                 description: 'أدخل بريدك الإلكتروني لإعادة تعيين كلمة المرور الخاصة بك، وسنرسل لك رمز التأكيد',
               ),
-              const SizedBox(height: 60),
+              SizedBox(height: 60.h),
               CustomTextField(
                 label: 'البريد الإلكتروني',
                 hintText: 'أدخل بريدك الإلكتروني',
@@ -46,8 +47,8 @@ class _ForgetPasswordBodyState extends State<ForgetPasswordBody> {
                   return null;
                 },
               ),
-              const SizedBox(height: 30),
-              CustomButton(text: 'ارسال', onPressed: (){})
+              SizedBox(height: 30.h),
+              CustomButton(text: 'ارسال', onPressed: () {})
             ],
           ),
         ),

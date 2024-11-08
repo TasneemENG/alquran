@@ -2,6 +2,7 @@ import 'package:alquran/core/functions/helper.dart';
 import 'package:alquran/core/manage_routes/routes.dart';
 import 'package:alquran/core/resources/styles.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class WatingBody extends StatefulWidget {
   const WatingBody({super.key});
@@ -31,7 +32,7 @@ class _WatingBodyState extends State<WatingBody> with SingleTickerProviderStateM
     _controller.forward();
 
     Future.delayed(const Duration(seconds: 3), () {
-     context.pushNamed(Routes.homeView);
+      context.pushNamed(Routes.homeView);
     });
   }
 
@@ -47,23 +48,23 @@ class _WatingBodyState extends State<WatingBody> with SingleTickerProviderStateM
       opacity: _fadeAnimation,
       child: Column(
         children: [
-          const SizedBox(height: 115),
+          SizedBox(height: 115.h),
           Center(
             child: SizedBox(
-              height: 450,
-              width: 314,
+              height: 450.h,
+              width: 314.w,
               child: Image.asset('assets/images/quran.png'),
             ),
           ),
-          const SizedBox(height: 30),
-          const Text(
+          SizedBox(height: 30.h),
+          Text(
             'تم ارسال طلبك',
-            style: TextStyles.s24w600brown,
+            style: TextStyles.s24w600brown.copyWith(fontSize: 24.sp),
           ),
-          const SizedBox(height: 30),
-          const Text(
+          SizedBox(height: 30.h),
+          Text(
             'يرجى الانتظار..\nسيقوم المسؤولون بتسكينك مع أحد المحفظين',
-            style: TextStyles.s16w500black,
+            style: TextStyles.s16w500black.copyWith(fontSize: 16.sp),
             textAlign: TextAlign.center,
           ),
         ],
